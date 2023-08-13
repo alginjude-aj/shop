@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./css/adminlte.css";
+import "./css/all.min.css";
 import './index.css';
 import App from './App';
+import Navbar from './components/Navbar';
+
 import reportWebVitals from './reportWebVitals';
+import Sidebar from './components/Sidebar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+    <div className="hold-transition sidebar-mini">
+    <div className="wrapper min-vh-100">
+      <Navbar />
+      <Sidebar />
     <App />
-  </React.StrictMode>
+    </div>
+    {/* Footer */}
+    </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
